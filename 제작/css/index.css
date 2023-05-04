@@ -5,6 +5,53 @@ strong,b{font-weight:none;}
 i,em,address{font-style:normal;}
 ul,ol{list-style: none;}
 
+
+/* common */
 html{
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+.cw{
+    border: 1px solid red;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* layout */
+header{
+    border: 1px solid blue;
+    width: 1200px;
+    position: fixed;
+    z-index: 111;
+}
+
+/* lnb */
+header > .lnb{border: 1px solid pink;}
+header > .lnb > ul{
+    border: 1px solid violet;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+header > .lnb > ul >li {padding: 6.5px;}
+header > .lnb > ul >li.Q::after{
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 40%;
+    right: calc(50% - 500px);
+    margin: 0 5px;
+}
+
+
+/* logo */
+header > .logoArea > h1{width: 200px;}
+header > .gnb{border: 1px solid blue;}
+header > .gnb > ul{
+    display: flex;
+    justify-content: flex-end;
 }
