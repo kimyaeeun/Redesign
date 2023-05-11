@@ -194,58 +194,133 @@ main .mainBanner::after{
 .flotingTxt > p a:hover{
     filter: grayscale(0) brightness(1);
 }
+
+
 /* main > goods */
-main  .best  .bImg{
+.goods{
     display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    width: 1200px;
+    height: 500px;
+}
+.goods > section.goodsH{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    width: 300px;
+    height: 500px;
+}
+.goods >  section > ul > li  h2{
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: #686868;
+    padding: 1.5px;
+}
+.goods > section > ul > li h2 span{color: #020d3a;}
+.goods  h4{
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+}
+.goods p{
+    font-size: 0.9rem;
+    padding-top: 5px;
+}
+.goods  ul > li img{
+    width: 250px;
+    height: 350px;
+    background: #e5eaef;
+    object-fit: contain;
+}
+.goods .sliderBest{
+    overflow: hidden;
     position: relative;
 }
-main  .best  .nImg{
-    display: flex;
+.goods .sliderBest > .best > ul > li{
+    flex: 1;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    text-align: center;
 }
-main  .best  .pImg{
+.goods .sliderBest > .best > ul{
     display: flex;
+    width: calc(100% - 300px);
+    height: 500px;
+    transform: translateX(0%);
 }
-main  .best  ul{
-    display: flex;
+.goods .sliderNew {
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
 }
-main  .new  ul{
+.goods .sliderNew > .new{
     display: flex;
+    width: calc(100% - 300px);
+    height: 500px;
 }
-main  .promote  ul{
-    display: flex;
+.goods .sliderNew > .new  > li{
+    flex: 1;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    text-align: center;
 }
-main  .goods  dt{
-    color: #686868;
-    font-size: 4rem;
-    font-weight: 600;
-    float:left;
-    height:40px;
+.goods .sliderPromote {
+    position: absolute;
+    left: 0; top: 0;
+    display: none;
+}
+.goods .sliderPromote > .promote{
     display: flex;
+    width: calc(100% - 300px);
+    height: 500px;
+    position: relative;
+}
+.goods .sliderPromote > .promote > li{
+    flex: 1;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    text-align: center;
+}
+.controler{
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 500px);
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* notice */
+
+.notice h3{
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: #020d3a;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.noticeWrap{
+    border: 1px solid purple;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding:0 14px;
-    margin-right:4px;
+    text-align: center;
+    position: relative;
 }
-main  .goods  dt.on{color:#020d3a;}
-main  .goods  dd{
-    position:absolute;
-    left:50px;top:50px;
-    width:100%;
-    height:80px;
-    display:none;
+.noticeWrap h4{
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
 }
-main  .goods  dt.on+dd{
-    display: block;
+.noticeWrap .virtual h4{
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
-
-/* 
-
-.tabMenu>dd>a{
-    
-    display:block;
-    height:100%;
-}
-.tabMenu>dd>a>img{
-    width:100%;
-    height:100%;
-    object-fit: contain;
-} */
+.noticeWrap 
+.noticeWrap > section{margin-right: 20px;}
+.noticeWrap > section:last-of-type{margin-right: 0;}
