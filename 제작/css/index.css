@@ -19,6 +19,7 @@ html{
 
 
 /* layout */
+/* header */
 header{
     width: 100%;
     height:65px;
@@ -27,9 +28,17 @@ header{
     z-index: 1111;
     transition: all 0.5s ease;
 }
+header::after{
+    content: '';
+    position: absolute;
+    left: 0; top: 65px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
 header:hover{
     display: block;
-    height: 600px;
+    height: 650px;
     background: #fff;
     opacity: 0.9;
 }
@@ -73,32 +82,15 @@ header  .gnb > ul > li:last-of-type{padding: 0;}
 
 
 /* menu */
-header  .menu > .menu1{
-    border: 1px solid blue;
-    display: flex;
-}
-
-header  .menu > .menu1  h4{font-weight: 500;}
-header .menu1 ul li{
-    font-size: 0.8rem;
-    color: #333;
-    padding: 3px 0;
-}
-header .menu1 ul li:hover{
-    color: #000;
-    font-weight: 500;
-    text-decoration:underline;
-}
-header > .menu  .menu1  span{color: #5e1415;}
- 
+header  .menu > .menu1{display: flex;}
 
 /* left */
+
 header  .menu  .mLeft{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     padding-top: 10px;
-    margin-right: 30px;
+    margin-right: 80px;
     width: 180px;
 }
 header  .menu > .menu1  .mLeft h3{
@@ -106,40 +98,118 @@ header  .menu > .menu1  .mLeft h3{
     font-size: 1.2rem;
     width: 180px;
     border-bottom: 1px solid #000;
+    padding-bottom: 5px;
 }
+header .menu1 .mLeft ul li{
+    font-size: 0.8rem;
+    color: #333;
+    padding: 3px 0;
+}
+header .menu1 .mLeft ul > li ul >li:hover{
+    color: #000;
+    font-weight: 500;
+    text-decoration:underline;
+}
+header .mLeft span{color: #5e1415;}
+header .mLeft .eStory{margin-bottom: 200px;}
 
-header  .menu  .mLeft > ul{margin-bottom: 150px;}
+
+
+
 
 
 /* right */
+header .menu1 .mRight ul > li > ul > li{
+    font-size: 0.8rem;
+    color: #333;
+    padding: 3px 0;
+}
+header .menu1 .mRight ul > li > ul > li:hover{
+    color: #000;
+    font-weight: 500;
+    text-decoration:underline;
+}
 header .mRight{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px solid red;
     width: calc(100% - 180px);
 }
-
-header  .menu > .menu1  .mRight h3{
+header .mRight h3{
+    padding: 10px 0;
     font-weight: 600;
     font-size: 1.2rem;
     border-bottom: none;
 }
-
-header .mRight ul:last-of-type{margin:0}
-header  .menu  .mRight h4{
-    border-bottom: 1px solid #000;
+header .mRight h4{
     padding: 5px 0;
-    width: 100px;
+    width: 120px;
+    border-bottom: 1px solid #000;
+    font-weight: 500
 }
-header  .menu .mImg ul{
+header .mRight span{
+    color: #5e1415;
+    font-weight: 500;
+}
+header .mRight > .skin > ul {
     display: flex;
-    margin-left: 30%;
+    justify-content: space-between;
+    width: calc(50% - 40px);
 }
-header  .menu img{
+header .mRight > .skin > ul > li{margin-right: 30px;}
+header .mRight > .skin > ul > li:last-of-type{margin: 0;}
+header .mRight > .make > ul {
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 40px);
+}
+header .mRight > .make > ul > li{margin-right: 30px;}
+header .mRight > .make > ul > li:last-of-type{margin: 0;}
+header .mRight > .fragrance {padding-top: 10px;}
+header .mRight > .fragrance > ul {
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 40px);
+}
+header .mRight > .fragrance > ul > li{margin-right: 25px;}
+header .mRight > .fragrance > ul > li:last-of-type{margin: 0px;}
+
+header  .menu .mImg ul > li {
+    width: 50%;
+    height: 100%;
+    transition: all 0.5s ease 0s;
+}
+header  .menu .mImg ul > li img{
+    transition: all 0.5s ease 0s;
+}
+header  .menu .mImg ul > li img:hover{
+    transform: scale(1.1);
+}
+header  .menu .mImg ul > li > figure{
     width: 200px;
     height: 200px;
-    padding: 0 20px;
+    overflow: hidden;
+}
+header  .menu .mImg ul {display: flex;}
+
+header  .menu .mImg ul > li.db{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+header  .menu .mImg ul li.sy{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+header  .menu .mImg ul img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+header  .menu .mImg ul h5{
+    font-weight: bold;
 }
 
 
@@ -155,7 +225,7 @@ main .mainBanner::after{
     left: 0; top: 0;
     width: 100%;
     height:780px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
 }
 .mainBanner video{
     width: 100%;
@@ -173,29 +243,27 @@ main .mainBanner::after{
 }
 .flotingTxt > h1{
     margin-bottom: 50px;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    line-height: 120%;
 }
 .flotingTxt > h1 span{
     color: #c48e5f;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 1.1em;
 }
 .flotingTxt > p a{
     padding: 30px 80px;
-    background: rgba(255, 255, 255, 0.391);
+    background: rgba(255, 255, 255, 0.5);
     display: inline-block;
-    color: #fff;
+    color: #c48e5f;
     font-size: 2rem;
     border-radius: 50px;
     transition: all 0.5s ease 0s;
     filter: grayscale(1) brightness(0.5);
-    overflow: hidden;
 }
 .flotingTxt > p a:hover{
     filter: grayscale(0) brightness(1);
 }
-
-
 /* main > goods */
 .goods{
     display: flex;
@@ -235,6 +303,8 @@ main .mainBanner::after{
 }
 .goods .sliderBest{
     overflow: hidden;
+}
+.goods .sliderBest > .best ul > li{
     position: relative;
 }
 .goods .sliderBest > .best > ul > li{
@@ -274,7 +344,6 @@ main .mainBanner::after{
     display: flex;
     width: calc(100% - 300px);
     height: 500px;
-    position: relative;
 }
 .goods .sliderPromote > .promote > li{
     flex: 1;
@@ -282,16 +351,17 @@ main .mainBanner::after{
     margin-left: 50px;
     text-align: center;
 }
-.controler{
+.goods .controler{
     position: absolute;
-    left: calc(50% - 350px);
-    top: calc(50% - 500px);
+    left: 50%;
+    top: 50%;
     width: 55%;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
     box-sizing: border-box;
     padding: 0 10px;
+    border: 1px solid red;
 }
 
 /* notice */
