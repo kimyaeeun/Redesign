@@ -535,10 +535,8 @@ main .mainBanner::after{
     text-align: center;
 }
 .present ul > li > figure{margin-bottom: 42px;}
-.present ul img{padding-top: 70px};
-.present > ul > li > h4 a{
-    font-weight: 600;
-}
+.present ul img{padding-top: 70px}
+.present > ul > li  h4 a{font-weight: 600;}
 .present ul li p{
     font-size: 0.8rem;
     margin-bottom: 105px;
