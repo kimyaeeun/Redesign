@@ -12,7 +12,7 @@ html{
     font-size: 14px;
 }
 .cw{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 1200px;
     margin: 0 auto;
 }
@@ -251,18 +251,20 @@ main .mainBanner::after{
 .flotingTxt > h1{
     margin-bottom: 50px;
     font-size: 4rem;
-    line-height: 120%;
+    line-height: 110%;
+    font-weight: 100;
 }
 .flotingTxt > h1 span{
     color: #c48e5f;
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: uppercase;
 }
 .flotingTxt > p a{
-    padding: 30px 80px;
-    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 60px;
+    background: rgba(255, 255, 255, 0.8);
     display: inline-block;
-    color: #fff;
+    color: #2a2a2a;
     font-size: 2rem;
     border-radius: 50px;
     transition: all 0.5s ease 0s;
@@ -271,29 +273,21 @@ main .mainBanner::after{
 .flotingTxt > p a:hover{
     filter: grayscale(0) brightness(1);
     color: #c48e5f;
+    font-weight: 700;
 }
 /* main > goods */
 .goods{
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
+    padding-top: 224px;
     width: 1200px;
     height: 500px;
 }
-.goods > section.goodsH{
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    width: 300px;
-    height: 500px;
-}
+.goods > section.goodsH{margin-top: 94px;}
 .goods >  section > ul > li  h2{
     font-weight: bold;
-    font-size: 2.8rem;
+    font-size: 52px;
     color: #686868;
-    padding-top: 5px;
-    padding-left: 60px;
-
 }
 .goods > section > ul > li h2 span{color: #020d3a;}
 .goods  h4{
@@ -368,21 +362,29 @@ main .mainBanner::after{
     position: absolute;
     left: 5%;
     bottom: 60%;
-    width: 850px;
+    width: 860px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 10px;
 }
+.goods .controler i{
+    border: 1px solid red;
+    transition: all 0.5s ease 0s;
+
+}
+.goods .controler i:hover{
+    opacity: 0.5;
+}
 
 /* notice */
-
 .notice h3{
     font-weight: bold;
-    font-size: 2.8rem;
-    color: #fff;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-size: 50px;
+    color: #020d3a;
+    padding-top: 146px;
+    padding-bottom: 33px;
 }
 .noticeWrap{
     display: flex;
@@ -391,11 +393,21 @@ main .mainBanner::after{
     text-align: center;
     width: 100%;
 }
+.noticeWrap > ul > li{
+    width: 368px;
+    height: 420px;
+    overflow: hidden;
+}
 .noticeWrap h4{
     font-weight: 700;
     font-size: 1.5rem;
     color: #fff;
     transition: all 0.5s ease 0s;
+}
+.noticeWrap li:hover h4{
+    transform: translateY(-30px);
+    color:#fff;
+    font-weight: 800;
 }
 .noticeWrap p{
     font-weight: 700;
@@ -403,12 +415,23 @@ main .mainBanner::after{
     opacity: 0;
     transition: all 0.5s ease 0s;
 }
-/* virtual */
-.noticeWrap > .virtual{
-    position: relative;
-    width: 368px;
-    height: 420px;
+.noticeWrap > ul > li:hover p{
+    opacity: 1;
+    color: #fff;
 }
+.noticeWrap>ul>li img{
+    transition:all 0.5s ease 0s;
+    filter:grayscale(1) brightness(0.4);
+}
+.noticeWrap>ul>li:hover img{
+    transform:scale(1.1);
+    filter:grayscale(0) brightness(0.7);
+}
+.noticeWrap > section{margin-right: 20px;}
+.noticeWrap > section:last-of-type{margin-right: 0;}
+
+/* virtual */
+.noticeWrap > .virtual{position: relative;}
 .noticeWrap> .virtual h4{
     position: absolute;
     top: 50%;
@@ -435,8 +458,6 @@ main .mainBanner::after{
 /* live */
 .noticeWrap > .live{
     position: relative;
-    width: 368px;
-    height: 420px;
     margin-right: 20px;
 }
 .noticeWrap> .live h4{
@@ -463,11 +484,7 @@ main .mainBanner::after{
 }
 
 /* luxury */
-.noticeWrap > .luxury{
-    position: relative;
-    width: 368px;
-    height: 420px;
-}
+.noticeWrap > .luxury{position: relative;}
 .noticeWrap> .luxury h4{
     position: absolute;
     top: 50%;
@@ -490,33 +507,12 @@ main .mainBanner::after{
     height: 1px;
     background: #fff;
 }
-.noticeWrap>ul>li{
-    overflow: hidden;
-    height: 420px;
-}
-.noticeWrap>ul>li img{
-    width: 100%;
-    height: 420px;
-    transition:all 0.5s ease 0s;
-    filter:grayscale(1) brightness(0.7);
-}
-.noticeWrap>ul>li:hover img{
-    transform:scale(1.1);
-    filter:grayscale(0) brightness(1);
-}
-.noticeWrap li:hover h4{
-    transform: translateY(-30px);
-    color:#fff;
-    font-weight: 800;
-}
-.noticeWrap > ul > li:hover p{
-    opacity: 1;
-    color: #fff;
-}
-.noticeWrap > section{margin-right: 20px;}
-.noticeWrap > section:last-of-type{margin-right: 0;}
 
 /* only */
+.only{
+    background: #f2f2f2;
+    margin-top: 172px;
+}
 .only h3{
     font-weight: bold;
     font-size: 2.8rem;
@@ -530,12 +526,9 @@ main .mainBanner::after{
     display: flex;
     justify-content: space-between;
 }
-.present ul li{
-    width: 500px;
-    text-align: center;
-}
+.present ul li{text-align: center;}
 .present ul > li > figure{margin-bottom: 42px;}
-.present ul img{padding-top: 70px}
+.present ul img{ padding-top: 70px}
 .present > ul > li  h4 a{font-weight: 600;}
 .present ul li p{
     font-size: 0.8rem;
@@ -552,7 +545,7 @@ main .mainBanner::after{
     content: '';
     position: absolute;
     left: 0%;
-    bottom: 40%;
+    bottom: 49%;
     width: 100%;
     height: 1px;
     background: #fff;
@@ -567,7 +560,7 @@ main .mainBanner::after{
     font-weight: bold;
 }
 .topfleft  li{
-    padding:10px 0;
+    padding: 10px 0;
     font-size: 1.2rem;
     margin-right: 104px;
 }
@@ -584,7 +577,10 @@ main .mainBanner::after{
 .topfRight > .bottomHead{font-weight: bold;}
 
 /* bottom */
-.bottomFooter{display: flex;} 
+.bottomFooter{
+    display: flex;
+    padding-bottom: 60px;
+} 
 .bottomFooter > .bottomfleft{
     width: 80%;
     color: #fff;
