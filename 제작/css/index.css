@@ -536,7 +536,7 @@ main .mainBanner::after{
     margin-top: 10px;
 }
 
-/* sub1 */
+/************************************************ sub1**************************************************** */
 /* main */
 main > .sub1Mainbanner > figure{
     height: 800px;
@@ -573,6 +573,7 @@ main .sub1Mainbanner > figure::after{
     display: inline-block;
     color: #c48e5f;   
     font-size: 2rem;
+    font-weight: 600;
 }
 .bestGoods > .bestTxt {
     text-align: center;
@@ -598,7 +599,6 @@ main .sub1Mainbanner > figure::after{
     margin-bottom: 140px;
 }
 .bestCategory{
-    border: 1px solid red;
     position: relative;
 }
 .bestCategory::before{
@@ -615,7 +615,7 @@ main .sub1Mainbanner > figure::after{
     content: "";
     position: absolute;
     left: 0%;
-    top: 2%;
+    top: 110px;
     width: 100%;
     height:100px;
     background: #000;
@@ -648,12 +648,87 @@ main .sub1Mainbanner > figure::after{
 .bestBottommenu ul > li :hover{color: #5082ff;}
 .bestTopmenu ul > li:last-of-type{padding-right: 0;}
 
+.bestMain{margin-top: 200px;}
+.bestMain > ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 162px;
+}
+.bestMain > ul > li{
+    width: calc((100% - 15px)/3);
+    height: 800px;
+    text-align: center;
+}
+.bestMain > ul > li > figure{
+    width: 380px;
+    height: 520px;
+    background: #e5eaef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease 0s;
+}
+.bestMain > ul > li > figure:hover{
+    opacity: 0.6;
+}
+.bestMain > ul > li img{
+    width: 370px;
+    height: 370px;
+    object-fit: contain;
+}
+.bestMain > ul > li h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.bestMain > ul > li h3 span{color: #af0000;}
+.bestMain > ul > li h4{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.bestMain > ul > li h5{margin-bottom: 24px;}
+.bestMain > ul > li p{margin-bottom: 12px;}
+.bestMain > ul > li p.menuTxt a{
+    border: 1px solid black;
+    padding: 4px 10px;
+    display: block;
+    text-align: center;
+    width: 150px;
+    padding: 3px 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease 0s;
+}
+.bestMain > ul > li p.menuTxt a:hover{
+    background: #000;
+    opacity: 0.4;
+    color: #fff;
+}
+.pageNum > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.pageNum > ul > li{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.pageNum > ul > li:last-of-type{margin-right: 0;}
+.pageNum > ul > li.on{
+    background: #000;
+    color: #fff;
+}
 
-
-
-
-
-
+/*******************************sub2*************************************************************************/
 
 
 
