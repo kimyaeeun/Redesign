@@ -84,6 +84,40 @@ header  .gnb > ul > li:last-of-type{padding: 0;}
     font-weight: bold;
 }
 
+
+
+/* 
+.tabMenu{
+    border: 1px solid red;
+    width: 400PX;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    position: relative;
+}
+.tabMenu > dt{
+    border: 1px solid blue;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+}
+.tabMenu > dt.on{
+    background: lightcyan;
+}
+.tabMenu > dd{
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    display: none;
+}
+.tabMenu > dt.on+dd{
+    display: block;
+} */
+
+
+
 /* menu */
 header  .menu > .menu1{display: flex;}
 
@@ -1604,3 +1638,10 @@ main .sub2Mainbanner > figure::after{
     font-size: 16px;
     margin-top: 3px;
 }
+
+
+
+
+
+
+
