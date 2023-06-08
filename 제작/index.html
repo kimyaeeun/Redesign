@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./css/font.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rubik+Pixels&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4e9cbe5769.js" crossorigin="anonymous"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
@@ -27,7 +31,7 @@
             </nav>
             <nav class="gnb">
                 <h1><a href="#"><img src="./img/main/logo/Estee Lauder logo.svg" alt="에스티로더 로고"></a></h1>
-                <ul class="tabTit">
+                <ul>
                     <li><a href="#"><span>ESTEELAUDER STORY</span></a></li>
                     <li><a href="#">스킨케어</a></li>
                     <li><a href="#">메이크업</a></li>
@@ -200,132 +204,134 @@
             </div>
             <div class="goods cw">
                 <section class="goodsH">
-                    <ul>
+                    <ul class="tabMenu">
                         <li><h2><span><a href="#">BEST</a></span></h2></li>
                         <li><h2><a href="#">NEW</a></h2></li>
                         <li><h2><a href="#">PROMOTE</a></h2></li>
                     </ul>
                 </section>
                     <section class="sliderBest">
-                        <div class="best">
-                                <ul>
-                                    <li>
+                        <div class="best swiper on">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/best/트리트먼트 로션.png" alt="마이크로 에센스 트리트먼트 로션"></a>
                                         <a href="#"><h4>Micro Essence</h4></a>
                                         <a href="#"><h5>마이크로 에센스 트리트먼트 로션</h5></a>
                                         <p>₩82,000 - ₩276,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/best/마이크로 에센스 트리트먼트 로션 프레시.png" alt="마이크로 에센스 트리트먼트 로션 프레시"></a>
                                         <a href="#"><h4>Micro Essence</h4></a>
                                         <a href="#"><h5>마이크로 에센스 트리트먼트 로션 프레시</h5></a>
                                         <p>₩82,000 - ₩276,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/best/갈색병 세럼.png" alt="갈색병 세럼"></a>
                                         <a href="#"><h4>Advanced Night Repair</h4></a>
                                         <a href="#"><h5>갈색병 세럼</h5></a>
                                         <p>₩82,000 - ₩299,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/best/유스 파워 크림.png" alt="리바이탈라이징 수프림 플러스 유스 파워 크림"></a>
                                         <a href="#"><h4>Revitalizing Supreme+</h4></a>
                                         <a href="#"><h5>리바이탈라이징 수프림 플러스 유스 파워 크림</h5></a>
                                         <p>₩42,000 - ₩199,000</p>
                                     </li>
-                                    <li>
-                                        <a href="#"><img src=./img/main/best/갈색병 아이 젤 크림.png" alt="어드밴스드 나이트 리페어 아이 수퍼차지드 젤-크림"></a>
+                                    <li class="swiper-slide">
+                                        <a href="#"><img src="./img/main/best/갈색병 아이 젤 크림.png" alt="어드밴스드 나이트 리페어 아이 수퍼차지드 젤-크림"></a>
                                         <a href="#"><h4>Advanced Night Repair</h4></a>
-                                        <a href="#"><h5>어드밴스드 나이트 리페어 아이 수퍼차지드 젤-크림</h5></a>
+                                        <a href="#"><h5>어드밴스드 나이트 리페어 아이 수퍼차지드<br>젤-크림</h5></a>
                                         <p>₩42,000 - ₩199,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/best/인텐스 리셋 컨센트레이트.png" alt="어드밴스드 나이트 리페어 인텐스 리셋 컨센트레이트"></a>
                                         <a href="#"><h4>Advanced Night Repair</h4></a>
-                                        <a href="#"><h5>어드밴스드 나이트 리페어 인텐스 리셋 컨센트레이트</h5></a>
+                                        <a href="#"><h5>어드밴스드 나이트 리페어 인텐스 리셋<br>컨센트레이트</h5></a>
                                         <p>₩143,000</p>
                                     </li>
                                 </ul>
+                                <div class="controler swiper-pagination">
+                                    <a href="#" class="btnPrev btnprev1"><i class="fa-solid fa-angle-left fa-3x"></i></a>
+                                    <a href="#" class="btnNext btnnext1"><i class="fa-solid fa-angle-right fa-3x"></i></a>
+                                </div>
                         </div>
-                        <div class="sliderNew">
-                            <ul class="new">
-                                    <li>
+                        <div class="sliderNew swiper">
+                            <ul class="new swiper-wrapper">
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/new/뉴트리셔스 래디언트 에센스 로션.png" alt="뉴트리셔스 래디언트 에센스 로션"></a>
                                         <a href="#"><h4>Nutritious</h4></a>
                                         <a href="#"><h5>뉴트리셔스 래디언트 에센스 로션</h5></a>
                                         <p>₩62,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/new/뉴트리셔스 에어리 로션.png" alt="뉴트리셔스 에어리 로션"></a>
                                         <a href="#"><h4>Nutritious</h4></a>
                                         <a href="#"><h5>뉴트리셔스 에어리 로션</h5></a>
                                         <p>₩82,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/new/뉴트리셔스2in1폼클렌저.png" alt="뉴트리셔스2-in-1폼클렌저"></a>
                                         <a href="#"><h4>Nutritious</h4></a>
                                         <a href="#"><h5>뉴트리셔스2-in-1폼클렌저</h5></a>
                                         <p>₩47,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/new/더블웨어 세컨 스킨 크림 프라이머.png" alt="더블웨어 세컨 스킨 크림 프라이머"></a>
                                         <a href="#"><h4>Double Wear</h4></a>
                                         <a href="#"><h5>더블웨어 세컨 스킨 크림 프라이머<br>SPF20 / PA++</h5></a>
                                         <p>₩84,000</p>
                                     </li>
-                                    <li>
+                                    <li class="swiper-slide">
                                         <a href="#"><img src="./img/main/new/블러싱 샌즈 캔들.png" alt="블러싱 샌즈 캔들"></a>
                                         <a href="#"><h4>Luxury Fragrance Collection</h4></a>
                                         <a href="#"><h5>블러싱 샌즈 캔들</h5></a>
                                         <p>₩52,000</p>
                                     </li>
                             </ul>
+                            <div class="controler swiper-pagination">
+                                <a href="#" class="btnPrev btnprev1"><i class="fa-solid fa-angle-left fa-3x"></i></a>
+                                <a href="#" class="btnNext btnnext1"><i class="fa-solid fa-angle-right fa-3x"></i></a>
+                            </div>
                         </div>            
-                        <div class="sliderPromote">
-                            <ul class="promote">
-                                <li>
+                        <div class="sliderPromote swiper">
+                            <ul class="swiper-wrapper promote">
+                                <li class="swiper-slide">
                                     <a href="#"><img src="./img/main/promote/아이 컨센트레이트 매트릭스.png" alt="어드밴스드 나이트 리페어 아이 컨센트레이트 매트릭스"></a>
                                     <a href="#"><h4>Advanced Night Repair</h4></a>
-                                    <a href="#"><h5>어드밴스드 나이트 리페어 아이 컨센트레이트 매트릭스</h5></a>
+                                    <a href="#"><h5>어드밴스드 나이트 리페어 아이 컨센트레이트<br>매트릭스</h5></a>
                                     <p>₩128,000</p>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#"><img src="./img/main/promote/퍼펙셔니스트 프로 멀티 존 링클 컨센트레이트.png" alt="퍼펙셔니스트 프로 멀티 존 링클 컨센트레이트"></a>
                                     <a href="#"><h4>Perfectionist Pro</h4></a>
                                     <a href="#"><h5>퍼펙셔니스트 프로 멀티 존 링클 컨센트레이트</h5></a>
                                     <p>₩186,000</p>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#"><img src="./img/main/promote/미니 원더즈 - 럭셔리 프래그런스 디스커버리 키트.png" alt="미니 원더즈 - 럭셔리 프래그런스 디스커버리 키트"></a>
                                     <a href="#"><h4>Luxury Fragrance Collection</h4></a>
-                                    <a href="#"><h5>미니 원더즈 - 럭셔리 프래그런스 디스커버리 키트<br>2ml*8</h5></a>
+                                    <a href="#"><h5>미니 원더즈 - 럭셔리 프래그런스 디스커버리<br>키트<br>2ml*8</h5></a>
                                     <p>₩49,000</p>
                                 </li>
-                                <li>
-                                    <a href="#"><img src="./img/main/promote/더블웨어 세컨 스킨 크림 프라이머.png" alt="더블웨어 세컨 스킨 크림 프라이머"></a>
-                                    <a href="#"><h4>Double Wear</h4></a>
-                                    <a href="#"><h5>더블웨어 세컨 스킨 크림 프라이머<br>SPF20 / PA++</h5></a>
-                                    <p>₩84,000</p>
-                                </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <a href="#"><img src="./img/main/promote/퓨어 컬러 휩 매트 립 컬러.png" alt="퓨어 컬러 휩 매트 립 컬러"></a>
                                     <ul class="pColor">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                        <li>5</li>
-                                        <li>6</li>
+                                        <li class="pColor1">1</li>
+                                        <li class="pColor2">2</li>
+                                        <li class="pColor3">3</li>
+                                        <li class="pColor4">4</li>
+                                        <li class="pColor5">5</li>
+                                        <li class="pColor6">6</li>
                                     </ul>
                                     <a href="#"><h4>Pure Color</h4></a>
                                     <a href="#"><h5>퓨어 컬러 휩 매트 립 컬러</h5></a>
                                     <p>₩48,000</p>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="controler">
-                            <a href="#"><i class="fa-solid fa-angle-left fa-3x"></i></a>
-                            <a href="#"><i class="fa-solid fa-angle-right fa-3x"></i></a>
+                            <div class="controler swiper-pagination">
+                                <a href="#" class="btnPrev btnprev1"><i class="fa-solid fa-angle-left fa-3x"></i></a>
+                                <a href="#" class="btnNext btnnext1"><i class="fa-solid fa-angle-right fa-3x"></i></a>
+                            </div>
                         </div>
                 </section>
             </div>
