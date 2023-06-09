@@ -58,74 +58,44 @@ $(document).ready(function(){
 
 
     //notice    
+    $(".scTop>li").each(function(){
+        let result = Math.round(Math.random())
+            $(this).addClass("scTop")
+    })
+
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
-        if(winst>=$(".notice").offset().top){
-            $(".notice").addClass("on")
-        }else{
-            $(".notice").removeClass("on")
-        }
+        let winHeight = $(window).height()*0.75
+        
+        $(".scTop").each(function(){
+            if(winst+winHeight>$(this).offset().top){
+                $(this).addClass("on")
+            }else{
+                $(this).removeClass("on")
+            }
+        })
     })
 
-    $(".notice>section").on("wheel DOMMouseScroll", function (event) {
-      let E = event.originalEvent
-      let delta = 0;
-      if (E.detail) {
-        delta = E.detail * -40
-      } else {
-        delta = E.wheelDelta
-      }
-  
-      if (delta < 0) {
-        if ($(this).next().length != 0) {
-          let posTop = $(this).next().offset().top
-          $("html,body").stop().animate({scrollTop: posTop}, 1000)
-        }
-      } else {
-
-        if ($(this).prev().length != 0) {
-          let posTop = $(this).prev().offset().top
-          $("html,body").stop().animate({scrollTop: posTop}, 1000)
-        }
-      }
-      return false
+      //present  
+      $(".mtDown>li").each(function(){
+        let result = Math.round(Math.random())
+            $(this).addClass("mtDown")
     })
 
-
-    //only
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
-        if(winst>=$(".present").offset().top){
-            $(".present").addClass("on")
-        }else{
-            $(".present").removeClass("on")
-        }
+        let winHeight = $(window).height()*0.75 
+        
+        $(".mtDown").each(function(){
+            if(winst+winHeight>$(this).offset().top){
+                $(this).addClass("on")
+            }else{
+                $(this).removeClass("on")
+            }
+        })
     })
+})
 
-    $(".present").on("wheel DOMMouseScroll", function (event) {
-      let E = event.originalEvent
-      let delta = 0;
-      if (E.detail) {
-        delta = E.detail * -40
-      } else {
-        delta = E.wheelDelta
-      }
-  
-      if (delta < 0) {
-        if ($(this).next().length != 0) {
-          let posTop = $(this).next().offset().top
-          $("html,body").stop().animate({scrollTop: posTop}, 1000)
-        }
-      } else {
-
-        if ($(this).prev().length != 0) {
-          let posTop = $(this).prev().offset().top
-          $("html,body").stop().animate({scrollTop: posTop}, 1000)
-        }
-      }
-      return false
-    })
-  })
 
 
 

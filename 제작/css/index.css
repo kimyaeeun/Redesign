@@ -28,6 +28,15 @@ header{
     z-index: 1111;
     transition: all 0.5s ease;
 }
+header.backColor{
+    background: #fff;
+    opacity: 0.7;
+}
+
+.backColor.down{
+    background: #fff;
+    opacity: 1;
+}
 header.scDown{background: #fff;}
 header::after{
     content: '';
@@ -389,6 +398,18 @@ main .mainBanner::after{
 .goods .controler i:hover{opacity: 0.4;}
 
 /* notice */
+.scTop{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0;
+} 
+.scTop.on{
+    transform: translateX(0);
+    opacity: 1;
+}
+.noticeWrap1{transition: all 0.5s ease 0s;}
+.noticeWrap2{transition: all 0.5s ease 0.25s;}
+.noticeWrap3{transition: all 0.5s ease 0.5s;}
 .notice h3{
     font-weight: bold;
     font-size: 50px;
@@ -396,138 +417,86 @@ main .mainBanner::after{
     padding-top: 146px;
     padding-bottom: 33px;
 }
-.noticeWrap{
+.noticeWrap > li > ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     width: 100%;
 }
-.noticeWrap > ul > li{
-    width: 368px;
+.noticeWrap >li > ul > li img{
+    width: 100%;
+    height: 100%;
+}
+.noticeWrap >li > ul > li{
+    width: calc(100% - 20px);
     height: 420px;
-    overflow: hidden;
     transform: translateY(50px);
-    opacity: 0.1;
+    margin-right: 20px;
+    position: relative;
 }
-.notice.on .noticeWrap li{
-    transform: translateY(0px);
-    opacity: 1;
+.noticeWrap >li > ul > li:last-of-type{margin-right: 0;}
+.noticeWrap  >li > ul > li::after{
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height:420px;
+    background: rgba(0, 0, 0, 0.5);
 }
-.noticeWrap  ul  li:nth-of-type(1){transition: all 0.5s ease 0s;}
-.noticeWrap  ul  li:nth-of-type(2){transition: all 0.5s ease 0.25s;}
-.noticeWrap  ul  li:nth-of-type(3){transition: all 0.5s ease 0.5s;}
-.noticeWrap h4{
+.flotingBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 11111;
+}
+.flotingBox > h4{
     font-weight: 700;
     font-size: 1.5rem;
-    color: #fff;
     transition: all 0.5s ease 0s;
-}
-.noticeWrap li:hover h4{
-    transform: translateY(-30px);
-    color:#fff;
-    font-weight: 800;
-}
-.noticeWrap p{
-    font-weight: 700;
-    color: #fff;
-    opacity: 0;
-    transition: all 0.5s ease 0s;
-}
-.noticeWrap > ul > li:hover p{
     opacity: 1;
-    color: #fff;
+    transform: translateY(20px);
+    padding-bottom: 45px;
 }
-.noticeWrap>ul>li img{
-    transition:all 0.5s ease 0s;
-    filter:grayscale(1) brightness(0.4);
-}
-.noticeWrap>ul>li:hover img{
-    transform:scale(1.1);
-    filter:grayscale(0) brightness(0.7);
-}
-.noticeWrap > section{margin-right: 20px;}
-.noticeWrap > section:last-of-type{margin-right: 0;}
-
-/* virtual */
-.noticeWrap > .virtual{position: relative;}
-.noticeWrap> .virtual h4{
-    position: absolute;
-    top: 50%;
-    left: 28%;
-    z-index: 111;
-}
-.noticeWrap> .virtual p{
-    position: absolute;
-    bottom: 100px;
-    left: 70px;
-    z-index: 111;
-}
-.noticeWrap>.virtual p::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(100% - 70px);
-    width: 50px;
-    height: 1px;
-    background: #fff;
-}
-
-/* live */
-.noticeWrap > .live{
+.noticeWrap>li>ul>li:hover .flotingBox h4{transform: translateY(0);}
+.flotingBox > p {
+    font-weight: 700;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    padding-top: 30px;
     position: relative;
-    margin-right: 20px;
+    line-height: 150%;
 }
-.noticeWrap> .live h4{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    z-index: 111;
-}
-.noticeWrap> .live p{
-    position: absolute;
-    bottom: 100px;
-    left: 80px;
-    z-index: 111;
-}
-.noticeWrap>.live p::before{
+.noticeWrap>li>ul>li:hover .flotingBox>p{opacity: 1;}
+.flotingBox>p::after {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% - 70px);
-    width: 50px;
-    height: 1px;
-    background: #fff;
-}
-
-/* luxury */
-.noticeWrap > .luxury{position: relative;}
-.noticeWrap> .luxury h4{
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    z-index: 111;
-}
-.noticeWrap> .luxury p{
-    position: absolute;
-    bottom: 100px;
-    left: 80px;
-    z-index: 111;
-}
-.noticeWrap>.luxury p::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(100% - 70px);
-    width: 50px;
+    top: 10%;
+    width: 30px;
     height: 1px;
     background: #fff;
 }
 
 /* only */
+.mtDown{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0;
+} 
+.mtDown.on{
+    transform: translateX(0);
+    opacity: 1;
+}
+.present1{transition: all 0.5s ease 0s;}
+.present2{transition: all 0.5s ease 0.25s;}
+.present3{transition: all 0.5s ease 0.45s;}
+.present4{transition: all 0.5s ease 0.65s;}
+.present5{transition: all 0.5s ease 0.85s;}
 .only{
     background: #f2f2f2;
     margin-top: 172px;
@@ -554,11 +523,6 @@ main .mainBanner::after{
     transform: translateY(0px);
     opacity: 1;
 }
-.present ul li:nth-of-type(1){transition: all 0.5s ease 0s;}
-.present ul li:nth-of-type(2){transition: all 0.5s ease 0.25s;}
-.present ul li:nth-of-type(3){transition: all 0.5s ease 0.5s;}
-.present ul li:nth-of-type(4){transition: all 0.5s ease 0.7s;}
-.present ul li:nth-of-type(5){transition: all 0.5s ease 1s;}
 .present ul > li > figure{margin-bottom: 42px;}
 .present ul img{ padding-top: 70px}
 .present > ul > li  h4 a{font-weight: 600;}
@@ -568,200 +532,226 @@ main .mainBanner::after{
     margin-top: 10px;
 }
 
-    /************************************************ sub1**************************************************** */
-    /* main */
-    main > .sub1Mainbanner > figure{
-        height: 800px;
-        position: relative;
-        overflow: hidden;
-    }
-    main .sub1Mainbanner > figure::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height:800px;
-        background: #000;
-        opacity: 0.3;
-    }
-    .sub1Mainbanner  .floationgTextSub1{
-        position: absolute;
-        left: 300px;
-        top: 285px;
-        z-index: 100;
-        color: #fff;
-    }
-    .floationgTextSub1 > h1{
-        margin-bottom: 50px;
-        font-size: 50px;
-        line-height: 110%;
-        font-weight: 200;
-    }
-    .floationgTextSub1 > h1 span{
-        color: #c48e5f;
-        font-weight: 500;
-    }
-    .floationgTextSub1 > p {
-        display: inline-block;
-        color: #c48e5f;   
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    .bestGoods > .bestTxt {
-        text-align: center;
-        padding-top: 120px;
-    }
-    .bestGoods > .bestTxt > h2{
-        font-size: 50px;
-        font-weight: 600;
-        position: relative;
-    }
-    .bestGoods > .bestTxt > h2::after{
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 140%;
-        width: 16px;
-        height:5px;
-        background: #000;
-    }
-    .bestGoods > .bestTxt > p{
-        padding-top: 57px;
-        margin-bottom: 140px;
-    }
-    .bestCategory{
-        position: relative;
-    }
-    .bestCategory::before{
-        content: "";
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        width: 100%;
-        height:1px;
-        background: #000;
-        opacity: 0.4;
-    }
-    .bestCategory::after{
-        content: "";
-        position: absolute;
-        left: 0%;
-        top: 110px;
-        width: 100%;
-        height:100px;
-        background: #000;
-    }
-    .bestTopmenu > ul{display: flex;}
-    .bestTopmenu ul h3{
-        font-size: 30px;
-        font-weight: 600;
-        margin-bottom: 30px;
-        margin-right: 122px;
-        margin-top: 30px;
-    }
-    .bestBottommenu > ul {display: flex;}
-    .bestBottommenu ul > li {
-        font-size: 20px;
-        padding-right: 76px;
-        padding-top: 35px;
-        z-index: 111;
-        color: #fff;
-        align-self: center;
-        transition: all 0.5s ease 0s;
-    }
-    .bestBottommenu{position: relative;}
-    .bestBottommenu > .bottomBottom {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        display: none;
-    }
-    .bestBottommenu ul > li :hover{color: #5082ff;}
-    .bestTopmenu ul > li:last-of-type{padding-right: 0;}
+/************************************************ sub1*****************************************************/
+/* main */
+.scrollDown{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0;
+} 
+.scrollDown.on{
+    transform: translateY(0);
+    opacity: 1;
+}
+.floationgTextSub1{transition: all 0.5s ease 0.5s;}
+main > .sub1Mainbanner > figure{
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+main .sub1Mainbanner > figure::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:800px;
+    background: #000;
+    opacity: 0.3;
+}
+.sub1Mainbanner  .floationgTextSub1{
+    position: absolute;
+    left: 300px;
+    top: 285px;
+    z-index: 100;
+    color: #fff;
+}
+.floationgTextSub1 > h1{
+    margin-bottom: 50px;
+    font-size: 50px;
+    line-height: 110%;
+    font-weight: 200;
+}
+.floationgTextSub1 > h1 span{
+    color: #c48e5f;
+    font-weight: 500;
+}
+.floationgTextSub1 > p {
+    display: inline-block;
+    color: #c48e5f;   
+    font-size: 2rem;
+    font-weight: 600;
+}
+.bestGoods > .bestTxt {
+    text-align: center;
+    padding-top: 120px;
+}
+.bestGoods > .bestTxt > h2{
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+}
+.bestGoods > .bestTxt > h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140%;
+    width: 16px;
+    height:5px;
+    background: #000;
+}
+.bestGoods > .bestTxt > p{
+    padding-top: 57px;
+    margin-bottom: 140px;
+}
 
-    .bestMain{margin-top: 200px;}
-    .bestMain > ul{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        margin-bottom: 162px;
-    }
-    .bestMain > ul > li{
-        width: calc((100% - 15px)/3);
-        height: 800px;
-        text-align: center;
-    }
-    .bestMain > ul > li > figure{
-        width: 380px;
-        height: 520px;
-        background: #e5eaef;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 8px;
-        margin-bottom: 30px;
-        transition: all 0.5s ease 0s;
-    }
-    .bestMain > ul > li > figure:hover{
-        opacity: 0.6;
-    }
-    .bestMain > ul > li img{
-        width: 370px;
-        height: 370px;
-        object-fit: contain;
-    }
-    .bestMain > ul > li h3{
-        font-size: 16px;
-        font-weight: 700;
-    }
-    .bestMain > ul > li h3 span{color: #af0000;}
-    .bestMain > ul > li h4{
-        font-size: 15px;
-        font-weight: 700;
-        margin-bottom: 18px;
-    }
-    .bestMain > ul > li h5{margin-bottom: 24px;}
-    .bestMain > ul > li p{margin-bottom: 12px;}
-    .bestMain > ul > li p.menuTxt a{
-        border: 1px solid black;
-        padding: 4px 10px;
-        display: block;
-        text-align: center;
-        width: 150px;
-        padding: 3px 10px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        transition: all 0.5s ease 0s;
-    }
-    .bestMain > ul > li p.menuTxt a:hover{
-        background: #000;
-        opacity: 0.4;
-        color: #fff;
-    }
-    .pageNum > ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-    }
-    .pageNum > ul > li{
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        padding: 3px;
-        font-size: 16px;
-        margin-right: 5px;
-    }
-    .pageNum > ul > li:last-of-type{margin-right: 0;}
-    .pageNum > ul > li.on{
-        background: #000;
-        color: #fff;
-    }
+.bestCategory{position: relative;}
+.bestCategory::before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height:1px;
+    background: #000;
+    opacity: 0.4;
+}
+.bestCategory::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 110px;
+    width: 100%;
+    height:100px;
+    background: #000;
+}
+.tabTit > li.on{
+    border-top: 3px solid #000;
+    width: 300px;
+    color: #020d39;
+}
+.bestTopmenu > ul > li{width: 300px;}
+.bestTopmenu > ul{
+    display: flex;
+    width: 100%;
+}
+.bestTopmenu ul h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-right: 122px;
+    margin-top: 30px;
+}
+.bestBottommenu > ul {display: flex;}
+.bestBottommenu ul > li {
+    font-size: 20px;
+    padding-right: 76px;
+    padding-top: 35px;
+    z-index: 111;
+    color: #fff;
+    align-self: center;
+    transition: all 0.5s ease 0s;
+}
+.bestBottommenu{position: relative;}
+.bestBottommenu > .bottomBottom {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+}
+.bestBottommenu ul > li :hover{color: #5082ff;}
+.bestTopmenu ul > li:last-of-type{padding-right: 0;}
+.bestMain{margin-top: 200px;}
+.bestMain > ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 162px;
+}
+.bestMain > ul > li{
+    width: calc((100% - 15px)/3);
+    height: 800px;
+    text-align: center;
+}
+.bestMain > ul > li > figure{
+    width: 380px;
+    height: 520px;
+    background: #e5eaef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease 0s;
+}
+.bestMain > ul > li > figure:hover{opacity: 0.6;}
+.bestMain > ul > li img{
+    width: 370px;
+    height: 370px;
+    object-fit: contain;
+}
+.bestMain > ul > li h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.bestMain > ul > li h3 span{color: #af0000;}
+.bestMain > ul > li h4{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.bestMain > ul > li h5{margin-bottom: 24px;}
+.bestMain > ul > li p{margin-bottom: 12px;}
+.bestMain > ul > li p.menuTxt a{
+    border: 1px solid black;
+    padding: 4px 10px;
+    display: block;
+    text-align: center;
+    width: 150px;
+    padding: 3px 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease 0s;
+}
+.bestMain > ul > li p.menuTxt a:hover{
+    background: #000;
+    opacity: 0.4;
+    color: #fff;
+}
+.pageNum > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.pageNum > ul > li{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.pageNum > ul > li:last-of-type{margin-right: 0;}
+.pageNum > ul > li.on{
+    background: #000;
+    color: #fff;
+}
 
 /**********************************sub2*************************************************************************/
+.scrollDown{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0;
+} 
+.scrollDown.on{
+    transform: translateY(0);
+    opacity: 1;
+}
+.sub2MainbannerTxt > h1{transition: all 0.5s ease 0s;}
+.sub2MainbannerTxt > h2{transition: all 0.5s ease 0.25s;}
 .sub2Mainbanner {
     margin-bottom: 192px;
     position: relative;
@@ -852,7 +842,24 @@ main .sub2Mainbanner > figure::after{
     font-size: 35px;
 }
 .topmainTxtarea > ul > li:last-of-type{margin-top: 206px;}
-
+.mrtl{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0;
+}
+.mrtl.on{
+    transform: translateX(0);
+    opacity: 1;
+}
+.mltr{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.mltr.on{
+    transform: translateX(0);
+    opacity: 1;
+}
 .bottomMain{
     background: #0f0e0e;
     color: #fff;
@@ -964,7 +971,7 @@ main .sub2Mainbanner > figure::after{
 .bottomFooter > .bottomfright .icon ul li{margin-right: 14px;}
 
 
-    /********************************sub3******************************************************************/
+/************************************sub3******************************************************************/
 .sub3Mainbanner{
     position: relative;
     overflow: hidden;
@@ -1225,6 +1232,8 @@ main .sub2Mainbanner > figure::after{
 .mainVideorightBottomRight .dreamDuskMoodboosting > li > ul > li {
     padding-bottom: 12px;
 }
+
+
 /************************************2222222*********************************************************************/
 .sub3MainbannerContents .Fragrance2 .mainVideoright {
     margin-left: 0;
@@ -1421,6 +1430,7 @@ main .sub2Mainbanner > figure::after{
     background: #000;
     transform: rotateZ(-4deg);
 }
+
 
 /*************************************3333333********************************************************************/
 .sub3MainbannerContents > .Fragrance3{
