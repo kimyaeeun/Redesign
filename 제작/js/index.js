@@ -65,7 +65,7 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
-        let winHeight = $(window).height()*0.75
+        let winHeight = $(window).height()*0.9
         
         $(".scTop").each(function(){
             if(winst+winHeight>$(this).offset().top){
@@ -84,7 +84,7 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
-        let winHeight = $(window).height()*0.75 
+        let winHeight = $(window).height()*0.9
         
         $(".mtDown").each(function(){
             if(winst+winHeight>$(this).offset().top){

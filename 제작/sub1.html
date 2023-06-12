@@ -7,8 +7,10 @@
     <title>Estee Lauder-Sub1</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
+    <script src="./js/bestPro.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./js/sub1.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -202,30 +204,30 @@
                     <p>에스티로더의 베스트 셀러 상품을 만나보세요.</p>
                 </section>
                 <div class="bestCategory">
-                    <section class="bestTopmenu  cw">
+                    <section class="bestTopmenu cw">
                         <ul class="tabTit">
-                            <li><h3><a href="#">Skin Care</a></h3></li>
-                            <li><h3><a href="#">Make Up</a></h3></li>
+                            <li data-pro-type="0"><h3><a href="#">Skin Care</a></h3></li>
+                            <li data-pro-type="1"><h3><a href="#">Make Up</a></h3></li>
                         </ul>
                     </section>
                     <section class="bestBottommenu cw">
                         <ul class="bottomTop">
-                            <li><a href="#">제품 전체</a></li>
-                            <li><a href="#">스킨/로션</a></li>
-                            <li><a href="#">앰플/세럼</a></li>
-                            <li><a href="#">크림</a></li>
-                            <li><a href="#">세트</a></li>
+                            <li data-pro-subtype="all"><a href="#">제품 전체</a></li>
+                            <li data-pro-subtype="0"><a href="#">스킨/로션</a></li>
+                            <li data-pro-subtype="1"><a href="#">앰플/세럼</a></li>
+                            <li data-pro-subtype="2"><a href="#">크림</a></li>
+                            <li data-pro-subtype="3"><a href="#">세트</a></li>
                         </ul>
                         <ul class="bottomBottom">
-                            <li><a href="#">제품 전체</a></li>
-                            <li><a href="#">페이스</a></li>
-                            <li><a href="#">아이</a></li>
-                            <li><a href="#">립</a></li>
-                            <li><a href="#">세트</a></li>
+                            <li data-pro-subtype="all"><a href="#">제품 전체</a></li>
+                            <li data-pro-subtype="0"><a href="#">페이스</a></li>
+                            <li data-pro-subtype="1"><a href="#">아이</a></li>
+                            <li data-pro-subtype="2"><a href="#">립</a></li>
+                            <li data-pro-subtype="3"><a href="#">세트</a></li>
                         </ul>
                     </section>
                 <div class="bestMain cw">
-                    <ul>
+                    <ul class="bestMainList">
                         <li>
                             <figure>
                             <a href="#"><img src="./img/sub1/bestseller/트리트먼트 로션(건성용).png" alt="마이크로 에센스 트리트먼트 로션(건성용)"></a>
@@ -241,7 +243,7 @@
                             <a href="#"><img src="./img/sub1/bestseller/트리트먼트 로션 프레시(지성용).png" alt="마이크로 에센스 트리트먼트 로션(지성용)"></a>
                             </figure>
                             <a href="#"><h3>Micro Essence</h3></a>
-                            <a href="#"><h4>마이크로 에센스 트리트먼트 로션(건성용)</h4></a>
+                            <a href="#"><h4>마이크로 에센스 트리트먼트 로션(지성용)</h4></a>
                             <a href="#"><h5>피부 장벽 이중 잠금 케어로 피부 속부터 차오르는 투명 광채</h5></a>
                             <p>₩82,000 - ₩276,000</p>
                             <p class="menuTxt"><a href="#">자세히 보기</a></p>

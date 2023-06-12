@@ -25,7 +25,7 @@ header{
     height:65px;
     position: fixed;
     overflow: hidden;
-    z-index: 1111;
+    z-index: 111111;
     transition: all 0.5s ease;
 }
 header.backColor{
@@ -409,7 +409,7 @@ main .mainBanner::after{
 }
 .noticeWrap1{transition: all 0.5s ease 0s;}
 .noticeWrap2{transition: all 0.5s ease 0.25s;}
-.noticeWrap3{transition: all 0.5s ease 0.5s;}
+.noticeWrap3{transition: all 0.5s ease 0.45s;}
 .notice h3{
     font-weight: bold;
     font-size: 50px;
@@ -494,9 +494,9 @@ main .mainBanner::after{
 }
 .present1{transition: all 0.5s ease 0s;}
 .present2{transition: all 0.5s ease 0.25s;}
-.present3{transition: all 0.5s ease 0.45s;}
-.present4{transition: all 0.5s ease 0.65s;}
-.present5{transition: all 0.5s ease 0.85s;}
+.present3{transition: all 0.5s ease 0.35s;}
+.present4{transition: all 0.5s ease 0.45s;}
+.present5{transition: all 0.5s ease 0.65s;}
 .only{
     background: #f2f2f2;
     margin-top: 172px;
@@ -631,6 +631,7 @@ main .sub1Mainbanner > figure::after{
     width: 300px;
     color: #020d39;
 }
+
 .bestTopmenu > ul > li{width: 300px;}
 .bestTopmenu > ul{
     display: flex;
@@ -660,6 +661,7 @@ main .sub1Mainbanner > figure::after{
     left: 0%;
     display: none;
 }
+.tabTit > li.on .bestBottommenu > ul > li{display: block;}
 .bestBottommenu ul > li :hover{color: #5082ff;}
 .bestTopmenu ul > li:last-of-type{padding-right: 0;}
 .bestMain{margin-top: 200px;}
@@ -667,7 +669,6 @@ main .sub1Mainbanner > figure::after{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
     margin-bottom: 162px;
 }
 .bestMain > ul > li{
@@ -843,22 +844,41 @@ main .sub2Mainbanner > figure::after{
 }
 .topmainTxtarea > ul > li:last-of-type{margin-top: 206px;}
 .mrtl{
-    transform: translateX(50px);
+    transform:translateX(50px);
     opacity: 0;
-    transition: all 0.5s ease 0;
+    transition:all 0.5s ease 0s;
 }
 .mrtl.on{
-    transform: translateX(0);
+    transform:translateX(0);
     opacity: 1;
 }
 .mltr{
-    transform: translateX(-50px);
+    transform:translateX(-50px);
     opacity: 0;
-    transition: all 0.5s ease 0s;
+    transition:all 0.5s ease 0s;
 }
 .mltr.on{
     transform: translateX(0);
     opacity: 1;
+}
+.mbtt{
+    transform: translateY(50px);
+    opacity: 0.1;
+    transition: all 0.5s ease 0s;
+}
+.mbtt.on{
+    transform: translateY(0);
+    opacity: 1;
+}
+.secondmbtt{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease 1s;
+}
+.secondmbtt.on{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
 }
 .bottomMain{
     background: #0f0e0e;
@@ -1034,7 +1054,7 @@ main .sub2Mainbanner > figure::after{
 }
 
 
-.mainVideorightTop > .circle{
+.mainVideorightTop .circle{
     content: "";
     position: absolute;
     left: 68%;
@@ -1045,7 +1065,7 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     z-index: 11111;
 }
-.mainVideorightTop > .circle::after {
+.mainVideorightTop .circle::after {
     content: "";
     position: absolute;
     right: -53%;
@@ -1055,9 +1075,8 @@ main .sub2Mainbanner > figure::after{
     background: #000;
     opacity: 0.4;
     border-radius: 50%;
-    display: block;
 }
-.mainVideorightTop > .circle::before {
+.mainVideorightTop .circle::before {
     content: "";
     position: absolute;
     right: 53px;
@@ -1368,12 +1387,12 @@ main .sub2Mainbanner > figure::after{
 .blushingSandsCircle > .circle::before {
     content: "";
     position: absolute;
-    right: 6px;
+    right: 16px;
     width: 1px;
-    top: 13px;
-    height: 50px;
+    top: 12px;
+    height: 58px;
     background: #000;
-    transform: rotateZ(0deg);
+    transform: rotateZ(18deg);
 }
 
 
@@ -1640,7 +1659,7 @@ main .sub2Mainbanner > figure::after{
     object-fit: cover;
     transition: all 0.5s ease 0s;
 }
-.otherPerfume > ul > li > ul > li img:hover{transform: scale(1.1);}
+.otherPerfume > ul > li > ul > li img:hover{transform: scale(1.0);}
 .otherPerfume > ul > li > ul > li h4{
     font-size: 20px;
     font-weight: 500;

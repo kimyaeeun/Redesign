@@ -1,5 +1,33 @@
 $(document).ready(function(){
 
+    let resultArray = getArrayPro2(getArrayPro1(bestProduct,0))
+    let proResult = getElFromArray(resultArray)
+    $(".bestMainList").html(proResult)
+
+    // $(".btnMakeUp").click(function(){
+    //     $(".bestMainList").html(skinCareResult)
+    // })
+        let type1 = 0;
+    $(".tabTit>li").click(function(e){
+        e.preventDefault()
+        type1 = $(this).attr("data-pro-type")
+        // alert(typeof(type1))
+        let resultArray = getArrayPro2(getArrayPro1(bestProduct,type1))
+        let proResult = getElFromArray(resultArray)
+        console.log(proResult)
+        $(".bestMainList").html(proResult)
+    })
+
+    $(".bestBottommenu ul>li").click(function(e){
+        e.preventDefault()
+        let type2 = $(this).attr("data-pro-subtype")
+        let resultArray = getArrayPro2(getArrayPro1(bestProduct,type1),type2)
+        let proResult = getElFromArray(resultArray)
+        console.log(proResult)
+        $(".bestMainList").html(proResult)
+    })
+
+
     //header
     $(window).scroll(function(){
         let winTop = $(window).scrollTop() 
@@ -29,19 +57,4 @@ $(document).ready(function(){
         })
     })
 
-        $(".tabTit>li").click(function(e){
-            e.preventDefault()
-            $(".tabTit>li").removeClass("on")
-            $(this).addClass("on")
-            let idx = $(this).index()
-            //index()함수는 앞에 선택된 태그의 부모태그기준 순번을 리턴함
-            $(".tabDes").html(tabDescription[idx])
-        })
-
-        $(".tabTit>li").click(function(e){
-            e.preventDefault()
-            let idx = $(this).index()
-            $(".bestBottommenu>ul").removeClass("on")
-            $(".bestBottommenu>ul").eq(idx).addClass("on")
-        });
     })

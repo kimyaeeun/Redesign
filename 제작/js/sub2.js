@@ -11,27 +11,19 @@ $(document).ready(function(){
     })
     
     //sub2Mainbanner
-
-    //bottomMain
-    $(".sublists>li").each(function(){
-        let result = $("txtArea")
-        if(result){
-            $(this).addClass("mltr")
-        }else{
-            $(this).addClass("mrtl")
-        }
-        
-    })
-
+    
     $(window).scroll(function(){
         let winst = $(window).scrollTop()
-        let winHeight = $(window).height()*0.9        
-        $(".mltr,mrtl").each(function(){
+        let winHeight = $(window).height()*0.9 
+            
+    
+        $(".mltr,.mrtl,.mbtt,.secondmbtt").each(function(){
             if(winst+winHeight>$(this).offset().top){
                 $(this).addClass("on")
             }else{
                 $(this).removeClass("on")
             }
         })
+
     })
 })
