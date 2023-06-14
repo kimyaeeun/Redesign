@@ -12,7 +12,7 @@ let bestProduct = [
         imgFileName:"트리트먼트 로션(건성용).png",
         subTitle:"Micro Essence",
         proTxt:"건조한 피부에 깊은 속보습과 광채를 선사하는 발효 에너지",
-        price:"₩82,000 - ₩276,000"
+        price:"₩82,000 - ₩276,000",
     },
     {   
         type:0,
@@ -22,7 +22,7 @@ let bestProduct = [
         imgFileName:"트리트먼트 로션 프레시(지성용).png",
         subTitle:"Micro Essence",
         proTxt:"피부 장벽 이중 잠금 케어로 피부 속부터 차오르는 투명 광채",
-        price:"₩82,000 - ₩276,000"
+        price:"₩82,000 - ₩276,000",
     },
     {
         type:0,
@@ -32,7 +32,7 @@ let bestProduct = [
         imgFileName:"어드밴스드 나이트 리페어 아이 컨센트레이트 매트릭스.png",
         subTitle:"<span>[LAST CHANCE 40% 할인]</span>Advanced Night Repair",
         proTxt:"눈가 피부를 위한 집중 멀티 리페어",
-        price:"₩128,000"
+        price:"₩128,000",
     },
     {   
         type:0,
@@ -52,7 +52,8 @@ let bestProduct = [
         imgFileName:"어드밴스드 나이트 리페어 아이 수퍼차지드 젤-크림.png",
         subTitle:"Advanced Night Repair",
         proTxt:"2주 만에 다크서클 개선으로 더욱 환해지는 눈가피부를 충전시킬<br>에스티 로더의 단 하나의 슈퍼히어로",
-        price:"₩112,000"
+        price:"₩112,000",
+        shade:"c1,c6"
     },
     {
         type:0,
@@ -109,7 +110,7 @@ let bestProduct = [
         subType:3,
         title:"리바이탈라이징 수프림 플러스 유스 파워 크림 50ml 세트",
         folderSrc:"sub1/bestseller2/",
-        imgFileName:"리바이탈라이징 수프림 플러스 유스 파워 크림 50ml 세트.png",
+        imgFileName:"리바이탈라이징 수프림 플러스 유스파워 크림 50ml 세트.png",
         subTitle:"Revitalizing Supreme+",
         proTxt:"미니어처 세트 증정",
         price:"₩159,000"
@@ -178,38 +179,41 @@ let bestProduct = [
         type:1,
         subType:0,
         title:"더블 웨어 스테이-인-플레이스 메이크업 SPF10<br>PA++",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"더블웨어 스테이-인 플레이스 메이크업.png",
         subTitle:"Double Ware",
-        proTxt:"19쉐이드<br> sub1/bestseller3/face/스테이-인 플러스 쉐이드.png",
-        price:"₩84,000"
+        proTxt:"19쉐이드",
+        price:"₩84,000",
+        shade:"c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19"
     },
     {   
         type:1,
         subType:0,
         title:"퓨처리스트 아쿠아 브릴리언스 리퀴드 메이크업 SPF 20<br>PA++",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"퓨처리스트 아쿠아 브릴리언스 리퀴드 메이크업.png",
         subTitle:"Futurist Aqua Brilliance",
-        proTxt:"11쉐이드<br> sub1/bestseller3/face/퓨처리스트 아쿠아 쉐이드.png",
-        price:"₩84,000"
+        proTxt:"11쉐이드",
+        price:"₩84,000",
+        shade:"c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31"
     },
     {
         type:1,
         subType:0,
         title:"더블웨어 쉬어 매트 롱 웨어 메이크업",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"더블웨어 쉬어 매트 롱 웨어 메이크업.png",
         subTitle:"Double Ware",
-        proTxt:"8쉐이드<br> sub1/bestseller3/face/더블웨어 쉬어매트 롱 쉐이드.png",
-        price:"₩84,000"
+        proTxt:"8쉐이드",
+        price:"₩84,000",
+        shade:"c32,c33,c34,c35,c36,c37,c38,c39"
     },
     {   
         type:1,
         subType:1,
         title:"더블 웨어 제로-스머지 렝쓰닝 마스카라",
-        folderSrc:"sub1/bestseller3/eye",
-        imgFileName:"더블웨어 쉬어 매트 롱 웨어 메이크업.png",
+        folderSrc:"sub1/bestseller3/eye/",
+        imgFileName:"더블웨어 제로 스머지 렝쓰닝 마스카라.png",
         subTitle:"Double Ware",
         proTxt:"하루종일 번짐 없이 깔끔하게!<br>에스티 로더의 베스트 마스카라",
         price:"₩49,000"
@@ -218,7 +222,7 @@ let bestProduct = [
         type:1,
         subType:0,
         title:"더블웨어 플로리스 하이드레이팅 프라이머<br>SPF45++++",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"더블웨어 플로리스 하이드레이팅 프라이머.png",
         subTitle:"Double Ware",
         proTxt:"피치톤업이 선사하는 화사하고 매끈한 복숭아빛 피부",
@@ -228,51 +232,56 @@ let bestProduct = [
         type:1,
         subType:2,
         title:"퓨어 컬러 리바이탈라이징 크리스탈 밤",
-        folderSrc:"sub1/bestseller3/lip",
+        folderSrc:"sub1/bestseller3/lip/",
         imgFileName:"퓨어 컬러 리바이탈라이징 크리스탈 밤.png",
         subTitle:"Double Ware",
-        proTxt:"6쉐이드<br>sub1/bestseller3/lip/립스틱 쉐이드.png",
-        price:"₩48,000"
+        proTxt:"6쉐이드",
+        price:"₩48,000",
+        shade:"c40,c41,c42,c43,c44,c45"
     },
     {
         type:1,
         subType:0,
         title:"더블웨어 매트 파우더 파운데이션 ",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"더블웨어 매트 파우더 파운데이션.png",
         subTitle:"Double Wear",
-        proTxt:"7쉐이드<br>sub1/bestseller3/face/더블웨어 매트 파우더 파운데이션 쉐이드.png",
-        price:"₩84,000"
+        proTxt:"7쉐이드",
+        price:"₩84,000",
+        shade:"c46,c47,c48,c49,c50,c51,c52"
     },
     {
         type:1,
         subType:0,
         title:"더블웨어 매트 파우더 파운데이션 리필",
-        folderSrc:"sub1/bestseller3/face",
+        folderSrc:"sub1/bestseller3/face/",
         imgFileName:"더블웨어 매트 파우더 파운데이션 리필.png",
         subTitle:"Double Wear",
-        proTxt:"7쉐이드<br>sub1/bestseller3/face/더블웨어 매트 파우더 파운데이션 쉐이드.png",
-        price:"₩62,000"
+        proTxt:"7쉐이드",
+        price:"₩62,000",
+        shade:"c46,c47,c48,c49,c50,c51,c52"
     },
     {
         type:1,
         subType:0,
         title:"리-뉴트리브 울트라 래디언스 세럼 쿠션",
-        folderSrc:"sub1/bestseller3/face",
-        imgFileName:"리뉴트리브 4쉐이드.png",
+        folderSrc:"sub1/bestseller3/face/",
+        imgFileName:"리뉴트리브 울트라 래디언스 세럼 쿠션.png",
         subTitle:"RE-NUTRIV",
-        proTxt:"4쉐이드<br>sub1/bestseller3/face/리뉴트리브 4쉐이드.png",
-        price:"₩62,000"
+        proTxt:"4쉐이드",
+        price:"₩62,000",
+        shade:"c53,c54,c55,c56"
     },
     {
         type:1,
         subType:0,
         title:"리-뉴트리브 울트라 래디언스 세럼 쿠션 리필",
-        folderSrc:"sub1/bestseller3/face",
-        imgFileName:"리뉴트리브 4쉐이드.png",
+        folderSrc:"sub1/bestseller3/face/",
+        imgFileName:"리뉴트리브 울트라 래디언스 세럼 쿠션 리필.png",
         subTitle:"RE-NUTRIV",
-        proTxt:"4쉐이드<br>sub1/bestseller3/face/리뉴트리브 4쉐이드.png",
-        price:"₩62,000"
+        proTxt:"4쉐이드 ",
+        price:"₩62,000",
+        shade:"c53,c54,c55,c56"
     }
 ]
 
@@ -301,9 +310,19 @@ function getArrayPro2(arrayList,type="all"){
     }
 }
 
-function getElFromArray(proArray){
+function getElFromArray(proArray,countPerPage=9){
     let result="";
-    for(let i=0 ; i<proArray.length ; i++){
+    let iterate = countPerPage<=proArray.length?countPerPage:proArray.length
+    for(let i=0 ; i<iterate ; i++){
+        let shadeResult = "";
+        if(proArray[i].shade){
+            console.log(proArray[i].shade.split(","))
+            let shadeColorArray = proArray[i].shade.split(",")
+            for(let j=0 ; j<shadeColorArray.length ; j++){
+                shadeResult+=`<li class="${shadeColorArray[j]}">${shadeColorArray[j]}</li>`
+            }
+        }
+        
         result += `<li>
             <figure>
             <a href="#"><img src="./img/${proArray[i].folderSrc}${proArray[i].imgFileName}" alt="${proArray[i].title}"></a>
@@ -311,6 +330,9 @@ function getElFromArray(proArray){
             <a href="#"><h3>${proArray[i].subTitle}</h3></a>
             <a href="#"><h4>${proArray[i].title}</h4></a>
             <a href="#"><h5>${proArray[i].proTxt}</h5></a>
+            <ul class="shadeForm">
+                ${shadeResult}
+            </ul>
             <p>${proArray[i].price}</p>
             <p class="menuTxt"><a href="#">자세히 보기</a></p>
         </li>`
@@ -321,4 +343,24 @@ function getElFromArray(proArray){
     return result
 }
 
+
+function getPageLength(resultArray,countPerPage){
+    // console.log(resultArray.length)
+    let pageLength = Math.floor(resultArray.length/countPerPage)
+    let resultPageLength = resultArray.length%countPerPage?pageLength+1:pageLength
+    return resultPageLength
+}
+
+function makePaginationList(cssSelector,countForList){
+    let result ="";
+    for(let i=0 ; i<countForList ; i++){
+        result+= `<li><a href="#">${i+1}</a></li>`
+    }
+    document.querySelector(cssSelector).innerHTML = result
+}
+
+// function showItemCount(resultArray,countPerPage){
+
+//     resultArray.length
+// }
 // console.log(result)

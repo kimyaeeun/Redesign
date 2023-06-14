@@ -10,6 +10,12 @@ $(document).ready(function(){
         }
     })
 
+        // btnTop을 클릭하면 스크롤바가 가장 최상단으로 부드럽게 이동될 수 있도록
+    $(".btnTop").click(function(){
+        $("html,body").stop().animate({scrollTop:0},1000)
+        moveScroll(0,2000)
+    })
+
     //main
     //goods
     $(".tabMenu>li>h2").click(function(e){
@@ -26,6 +32,10 @@ $(document).ready(function(){
         $(".sliderBest>div").eq(idx).addClass("on")
     });
 
+    $(".btnPrev,.btnNext").click(function(e){
+        e.preventDefault()
+    })
+
     let slider1best = new Swiper(".best",{
         slidesPerView : 3,
         spaceBetween: 30,
@@ -37,21 +47,21 @@ $(document).ready(function(){
     })
 
     let slider2new = new Swiper(".sliderNew",{
-        slidesPerView : 3,
+        slidesPerView : 2.5,
         spaceBetween: 30,
         navigation: {
-            nextEl: ".btnnext1",
-            prevEl: ".btnprev1",
+            nextEl: ".btnnext2",
+            prevEl: ".btnprev2",
         },
         loop:true
     })
 
     let slider3promote = new Swiper(".sliderPromote",{
-        slidesPerView : 3,
+        slidesPerView : 2,
         spaceBetween: 30,
         navigation: {
-            nextEl: ".btnnext1",
-            prevEl: ".btnprev1",
+            nextEl: ".btnnext3",
+            prevEl: ".btnprev3",
         },
         loop:true
     })
@@ -75,7 +85,6 @@ $(document).ready(function(){
             }
         })
     })
-
       //present  
       $(".mtDown>li").each(function(){
         let result = Math.round(Math.random())

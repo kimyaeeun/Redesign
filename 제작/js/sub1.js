@@ -1,7 +1,15 @@
 $(document).ready(function(){
 
+    // setTimeout(function(){
+    //     $(".floationgTextSub1 > h1").addClass("on")
+    // },1000)
+    
+
+    let itemPerPage = 9;
     let resultArray = getArrayPro2(getArrayPro1(bestProduct,0))
-    let proResult = getElFromArray(resultArray)
+    makePaginationList(".pageBtn",getPageLength(resultArray,itemPerPage))
+    let proResult = getElFromArray(resultArray,itemPerPage)
+
     $(".bestMainList").html(proResult)
 
     // $(".btnMakeUp").click(function(){
@@ -13,7 +21,8 @@ $(document).ready(function(){
         type1 = $(this).attr("data-pro-type")
         // alert(typeof(type1))
         let resultArray = getArrayPro2(getArrayPro1(bestProduct,type1))
-        let proResult = getElFromArray(resultArray)
+        makePaginationList(".pageBtn",getPageLength(resultArray,itemPerPage))
+        let proResult = getElFromArray(resultArray,itemPerPage)
         console.log(proResult)
         $(".bestMainList").html(proResult)
     })
@@ -22,9 +31,18 @@ $(document).ready(function(){
         e.preventDefault()
         let type2 = $(this).attr("data-pro-subtype")
         let resultArray = getArrayPro2(getArrayPro1(bestProduct,type1),type2)
-        let proResult = getElFromArray(resultArray)
+        makePaginationList(".pageBtn",getPageLength(resultArray,itemPerPage))
+        let proResult = getElFromArray(resultArray,itemPerPage)
         console.log(proResult)
         $(".bestMainList").html(proResult)
+    })
+
+    $(".tabTit>li").click(function(e){
+            $(".tabTit>li").removeClass("on")
+            $(this).addClass("on") 
+            let idx = $(this).index()
+            $(".bestBottommenu>ul").removeClass("on")
+            $(".bestBottommenu>ul").eq(idx).addClass("on")
     })
 
 
@@ -32,29 +50,34 @@ $(document).ready(function(){
     $(window).scroll(function(){
         let winTop = $(window).scrollTop() 
         if(winTop>=1){
-            $("header").addClass("down")
+            $("header").addClass("hdDown")
         }else{
-            $("header").removeClass("down")
+            $("header").removeClass("hdDown")
         }
     })
 
-    //sub1Mainbanner
-    $("floationgTextSub1").each(function(){
-        let result = Math.round(Math.random())
-            $(this).addClass("scrollDown")
+    $(".btnTop").click(function(){
+        $("html,body").stop().animate({scrollTop:0},1000)
+        moveScroll(0,2000)
     })
 
-    $(window).scroll(function(){
-        let winst = $(window).scrollTop()
-        let winHeight = $(window).height()/2
+    //sub1Mainbanner
+    // $("floationgTextSub1").each(function(){
+    //     let result = Math.round(Math.random())
+    //         $(this).addClass("scrollDown")
+    // })
+
+    // $(window).scroll(function(){
+    //     let winst = $(window).scrollTop()
+    //     let winHeight = $(window).height()/2
         
-        $(".scrollDown").each(function(){
-            if(winst+winHeight>$(this).offset().top){
-                $(this).addClass("on")
-            }else{
-                $(this).removeClass("on")
-            }
-        })
-    })
+    //     $(".scrollDown").each(function(){
+    //         if(winst+winHeight>$(this).offset().top){
+    //             $(this).addClass("on")
+    //         }else{
+    //             $(this).removeClass("on")
+    //         }
+    //     })
+    // })
 
     })

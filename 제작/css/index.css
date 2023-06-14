@@ -33,11 +33,14 @@ header.backColor{
     opacity: 0.7;
 }
 
-.backColor.down{
+.backColor.hdDown{
     background: #fff;
     opacity: 1;
 }
-header.scDown{background: #fff;}
+header.scDown{
+    background: #fff;
+    color: #000;
+}
 header::after{
     content: '';
     position: absolute;
@@ -368,7 +371,7 @@ main .mainBanner::after{
 }
 .goods .sliderPromote > .promote .pColor{
     display: flex;
-    padding-left: 100px;
+    padding-left: 177px;
 }
 .goods .sliderPromote > .promote .pColor > li{
     margin-right: 3px;
@@ -517,7 +520,7 @@ main .mainBanner::after{
 .present ul>li{
     text-align: center;
     transform: translateY(50px);
-    opacity: 0.1;
+    opacity: 0;
 }
 .present.on ul>li{
     transform: translateY(0px);
@@ -530,6 +533,19 @@ main .mainBanner::after{
     font-size: 0.8rem;
     margin-bottom: 105px;
     margin-top: 10px;
+}
+.btnTop{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #000;
+    padding-top: 5px;
+    border: 1px solid #000;
 }
 
 /************************************************ sub1*****************************************************/
@@ -571,6 +587,16 @@ main .sub1Mainbanner > figure::after{
     font-size: 50px;
     line-height: 110%;
     font-weight: 200;
+    transition:all 0.5s ease 0s;
+    /* opacity: 0; */
+    animation: slow 2s ease 0s;
+}
+/* .floationgTextSub1 > h1.on{
+    opacity: 1;
+} */
+@keyframes slow{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .floationgTextSub1 > h1 span{
     color: #c48e5f;
@@ -581,6 +607,7 @@ main .sub1Mainbanner > figure::after{
     color: #c48e5f;   
     font-size: 2rem;
     font-weight: 600;
+    animation: slow 3s ease 0s;
 }
 .bestGoods > .bestTxt {
     text-align: center;
@@ -631,7 +658,8 @@ main .sub1Mainbanner > figure::after{
     width: 300px;
     color: #020d39;
 }
-
+.bestBottommenu > ul{display: none;}
+.bestBottommenu > ul.on{display: flex;}
 .bestTopmenu > ul > li{width: 300px;}
 .bestTopmenu > ul{
     display: flex;
@@ -644,7 +672,7 @@ main .sub1Mainbanner > figure::after{
     margin-right: 122px;
     margin-top: 30px;
 }
-.bestBottommenu > ul {display: flex;}
+/* .bestBottommenu > ul {display: flex;} */
 .bestBottommenu ul > li {
     font-size: 20px;
     padding-right: 76px;
@@ -661,7 +689,6 @@ main .sub1Mainbanner > figure::after{
     left: 0%;
     display: none;
 }
-.tabTit > li.on .bestBottommenu > ul > li{display: block;}
 .bestBottommenu ul > li :hover{color: #5082ff;}
 .bestTopmenu ul > li:last-of-type{padding-right: 0;}
 .bestMain{margin-top: 200px;}
@@ -753,6 +780,9 @@ main .sub1Mainbanner > figure::after{
 }
 .sub2MainbannerTxt > h1{transition: all 0.5s ease 0s;}
 .sub2MainbannerTxt > h2{transition: all 0.5s ease 0.25s;}
+.sub2MainbannerTxt > h1 > span{
+    animation: slow 2s ease 0s;    
+}
 .sub2Mainbanner {
     margin-bottom: 192px;
     position: relative;
@@ -1020,7 +1050,13 @@ main .sub2Mainbanner > figure::after{
     margin-bottom: 50px;
 }
 .sub3MainbannerTxt  span{color: #e3d1a5}
-.sub3MainbannerTxt > h2{margin-bottom: 50px;}
+.sub3MainbannerTxt > h2{
+    margin-bottom: 50px;
+    animation: slow 4s ease 0s;
+}
+.sub3MainbannerTxt > h3{
+    animation: slow 6s ease 0s;
+}
 .sub3MainbannerContents > .Frgrance1{
     height: 1800px;
     background: #f4e4ea;
@@ -1053,8 +1089,7 @@ main .sub2Mainbanner > figure::after{
     position: relative;
 }
 
-
-.mainVideorightTop .circle{
+.mainVideorightTop .circle1{
     content: "";
     position: absolute;
     left: 68%;
@@ -1064,8 +1099,10 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    transition: all 0.5s ease 0s;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainVideorightTop .circle::after {
+.mainVideorightTop .circle1::after {
     content: "";
     position: absolute;
     right: -53%;
@@ -1076,18 +1113,11 @@ main .sub2Mainbanner > figure::after{
     opacity: 0.4;
     border-radius: 50%;
 }
-.mainVideorightTop .circle::before {
-    content: "";
-    position: absolute;
-    right: 53px;
-    bottom: 3%;
-    width: 1px;
-    height: 163px;
-    background: #000;
-    transform: rotateZ(-31deg);
+@keyframes bounce{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.3);}
 }
-
-.mainVideoright > .mainVideorightTop > .mainVideorightTopTxt {
+.mainVideoright > .mainVideorightTop > .mainTxt1 {
     border: 1px solid black;
     border-radius: 15px;
     background: #fff;
@@ -1096,7 +1126,23 @@ main .sub2Mainbanner > figure::after{
     padding: 10px 20px;
     box-sizing: border-box;
     transform: translateY(-15%);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.mainTxt1::before {
+    content: "";
+    position: absolute;
+    right: 39%;
+    top: 93%;
+    width: 1px;
+    height: 163px;
+    background: #000;
+    transform: rotateZ(-31deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.mainVideoright > .mainVideorightTop > .mainTxt1.show{opacity: 1;}
 .mainVideoright > .mainVideorightTop figure{
     width: 500px;
     height: 300px;
@@ -1115,7 +1161,7 @@ main .sub2Mainbanner > figure::after{
 
 
 .mainFragranceImg{position: relative;}
-.mainFragranceImg > .circle {
+.mainFragranceImg > .circle2 {
     content: "";
     position: absolute;
     left: 40%;
@@ -1125,11 +1171,12 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainFragranceImg > .circle::after {
+.mainFragranceImg > .circle2::after {
     content: "";
     position: absolute;
-    right: -53%;
+    right: -54%;
     top: -47%;
     width: 27px;
     height: 27px;
@@ -1138,20 +1185,14 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.mainFragranceImg > .circle::before {
-    content: "";
-    position: absolute;
-    right: -126%;
-    width: 1px;
-    top: 70%;
-    height: 89px;
-    background: #000;
-    transform: rotateZ(-26deg);
-}
+.mainFragranceImg .circle2:hover:before{opacity: 1;}
  
 
-
-
+.dreamDuskNote > .dreamDuskNoteTxt{
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.dreamDuskNote > .dreamDuskNoteTxt.show{opacity: 1;}
 .dreamDuskNote > .dreamDuskNoteTxt > li > ul{display: flex;}
 .dreamDuskNote > .dreamDuskNoteTxt > li > ul > li{
     flex: 1;
@@ -1181,7 +1222,23 @@ main .sub2Mainbanner > figure::after{
     padding: 10px 20px;
     box-sizing: border-box;
     margin-top: 27px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.dreamDuskNoteTxt::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 97%;
+    width: 1px;
+    height: 95px;
+    background: #000;
+    transform: rotateZ(-31deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.dreamDuskNote > .dreamDuskNoteTxt.show{opacity: 1;}
 .mainVideorightBottom{display: flex;}
 .mainVideorightBottom .dreamDuskBox {
     width: 100px;
@@ -1191,7 +1248,7 @@ main .sub2Mainbanner > figure::after{
     position: relative;
 }
 
-.mainFragranceColor > .circle {
+.mainFragranceColor > .circle3 {
     content: "";
     position: absolute;
     left: 40%;
@@ -1201,11 +1258,12 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainFragranceColor > .circle::after {
+.mainFragranceColor > .circle3::after {
     content: "";
     position: absolute;
-    right: -53%;
+    right: -54%;
     top: -47%;
     width: 27px;
     height: 27px;
@@ -1214,16 +1272,8 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.mainFragranceColor > .circle::before {
-    content: "";
-    position: absolute;
-    left: 53%;
-    width: 1px;
-    top: 97%;
-    height: 30px;
-    background: #000;
-}
 
+.mainFragranceColor .circle3:hover:before{opacity: 1;}
 
 
 .dreamDuskMoodboosting {
@@ -1237,7 +1287,22 @@ main .sub2Mainbanner > figure::after{
     margin-top: 27px;
     transform: translate(-30%,-12%);
     font-size: 12px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.dreamDuskMoodboosting::before {
+    content: "";
+    position: absolute;
+    right: 75%;
+    width: 1px;
+    bottom: 100%;
+    height: 30px;
+    background: #000;
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.dreamDuskMoodboosting.show{opacity: 1;}
 .dreamDuskMoodboosting > h4 {
     font-size: 21px;
     font-weight: 600;
@@ -1254,6 +1319,33 @@ main .sub2Mainbanner > figure::after{
 
 
 /************************************2222222*********************************************************************/
+.mainTxt2 {
+    border: 1px solid black;
+    border-radius: 15px;
+    background: #fff;
+    width: 100%;
+    height: 170px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transform: translateY(-15%);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    z-index: 1111;
+}
+.mainTxt2::before {
+    content: "";
+    position: absolute;
+    right: 58%;
+    top: 94%;
+    width: 1px;
+    height: 137px;
+    background: #000;
+    transform: rotateZ(31deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.mainTxt2.show{opacity: 1;}
 .sub3MainbannerContents .Fragrance2 .mainVideoright {
     margin-left: 0;
     margin-right: 82px;
@@ -1314,10 +1406,25 @@ main .sub2Mainbanner > figure::after{
     padding: 10px 20px;
     box-sizing: border-box;
     margin-top: 27px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
-
+.blushingSandsNoteTxt::before {
+    content: "";
+    position: absolute;
+    right: 40%;
+    bottom: 98%;
+    width: 1px;
+    height: 119px;
+    background: #000;
+    transform: rotateZ(-23deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.blushingSandsNoteTxt.show{opacity: 1;}
 .blushingSandsfigure{position: relative;}
-.blushingSandsfigure > .circle {
+.blushingSandsfigure > .circle4 {
     content: "";
     position: absolute;
     left: 36%;
@@ -1327,8 +1434,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.blushingSandsfigure > .circle::after {
+.blushingSandsfigure > .circle4::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1340,17 +1448,6 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.blushingSandsfigure > .circle::before {
-    content: "";
-    position: absolute;
-    left: 30px;
-    width: 1px;
-    bottom: 9px;
-    height: 125px;
-    background: #000;
-    transform: rotateZ(20deg);
-}
-
 
 .mainVideorightBottom .blushingSandsMoodboosting > li > ul > li {padding-bottom: 12px;}
 .mainVideorightBottom .blushingSandsBox {
@@ -1361,7 +1458,7 @@ main .sub2Mainbanner > figure::after{
     position: relative;
 }
 
-.blushingSandsCircle > .circle {
+.blushingSandsCircle > .circle5{
     content: "";
     position: absolute;
     left: 36%;
@@ -1371,8 +1468,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.blushingSandsCircle > .circle::after {
+.blushingSandsCircle > .circle5::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1384,18 +1482,6 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.blushingSandsCircle > .circle::before {
-    content: "";
-    position: absolute;
-    right: 16px;
-    width: 1px;
-    top: 12px;
-    height: 58px;
-    background: #000;
-    transform: rotateZ(18deg);
-}
-
-
 .blushingSandsMoodboosting > li{display: flex;}
 .blushingSandsMoodboosting {
     border: 1px solid black;
@@ -1408,15 +1494,30 @@ main .sub2Mainbanner > figure::after{
     margin-top: 27px;
     transform: translate(6%,-9%);
     font-size: 12px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.blushingSandsMoodboosting::before {
+    content: "";
+    position: absolute;
+    right: 38%;
+    bottom: 98%;
+    width: 1px;
+    height: 59px;
+    background: #000;
+    transform: rotateZ(31deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.blushingSandsMoodboosting.show{opacity: 1;}
 .mainVideorightBottom .blushingSandsMoodboosting > li > .moodRight{padding-left: 7px;}
 .blushingSandsMoodboosting > h4 {
     font-size: 21px;
     font-weight: 600;
     padding-bottom: 10px;
 }
-
-.mainblushingSands > .circle {
+.mainblushingSands > .circle6{
     content: "";
     position: absolute;
     left: 40%;
@@ -1426,8 +1527,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainblushingSands > .circle::after {
+.mainblushingSands > .circle6::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1439,19 +1541,34 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.mainblushingSands > .circle::before {
-    content: "";
-    position: absolute;
-    right: 2px;
-    width: 1px;
-    top: 13px;
-    height: 112px;
-    background: #000;
-    transform: rotateZ(-4deg);
-}
-
 
 /*************************************3333333********************************************************************/
+.mainTxt3 {
+    border: 1px solid black;
+    border-radius: 15px;
+    background: #fff;
+    width: 100%;
+    height: 170px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transform: translateY(-15%);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
+}
+.mainTxt3::before {
+    content: "";
+    position: absolute;
+    right: 59%;
+    top: 98%;
+    width: 1px;
+    height: 113px;
+    background: #000;
+    transform: rotateZ(19deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.mainTxt3.show{opacity: 1;}
 .sub3MainbannerContents > .Fragrance3{
     height: 1800px;
     background: #f5e4f9;
@@ -1503,9 +1620,25 @@ main .sub2Mainbanner > figure::after{
     padding:20px;
     box-sizing: border-box;
     margin-top: 27px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.sensuousStarsNoteTxt::before {
+    content: "";
+    position: absolute;
+    right: 82%;
+    bottom: 99%;
+    width: 1px;
+    height: 92px;
+    background: #000;
+    transform: rotateZ(19deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.sensuousStarsNoteTxt.show{opacity: 1;}
 
-.mainFragranceImg3 > .circle {
+.mainFragranceImg3 > .circle7{
     content: "";
     position: absolute;
     left: 36%;
@@ -1515,8 +1648,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainFragranceImg3 > .circle::after {
+.mainFragranceImg3 > .circle7::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1528,19 +1662,8 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.mainFragranceImg3 > .circle::before {
-    content: "";
-    position: absolute;
-    left: 17px;
-    width: 1px;
-    bottom: 11px;
-    height: 109px;
-    background: #000;
-    transform: rotateZ(10deg);
-}
-
 .mainFragranceNote3{position: relative;}
-.mainFragranceNote3 > .circle {
+.mainFragranceNote3 > .circle8 {
     content: "";
     position: absolute;
     left: 21%;
@@ -1550,8 +1673,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainFragranceNote3 > .circle::after {
+.mainFragranceNote3 > .circle8::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1563,18 +1687,6 @@ main .sub2Mainbanner > figure::after{
     border-radius: 50%;
     display: block;
 }
-.mainFragranceNote3 > .circle::before {
-    content: "";
-    position: absolute;
-    right: 27px;
-    width: 1px;
-    top: 9px;
-    height: 95px;
-    background: #000;
-    transform: rotateZ(22deg);
-}
-
-
 .mainVideorightBottom .SensuousStarsBox {
     width: 100px;
     height: 100px;
@@ -1583,7 +1695,7 @@ main .sub2Mainbanner > figure::after{
     position: relative;
 }
 
-.mainFragranceNColor3 > .circle {
+.mainFragranceNColor3 > .circle9{
     content: "";
     position: absolute;
     left: 52%;
@@ -1593,8 +1705,9 @@ main .sub2Mainbanner > figure::after{
     border: 1px solid black;
     border-radius: 50%;
     z-index: 11111;
+    animation: bounce 1s ease 0s infinite;
 }
-.mainFragranceNColor3 > .circle::after {
+.mainFragranceNColor3 > .circle9::after {
     content: "";
     position: absolute;
     left: -7px;
@@ -1605,16 +1718,6 @@ main .sub2Mainbanner > figure::after{
     opacity: 0.4;
     border-radius: 50%;
     display: block;
-}
-.mainFragranceNColor3 > .circle::before {
-    content: "";
-    position: absolute;
-    right: 2px;
-    width: 1px;
-    top: 12px;
-    height: 71px;
-    background: #000;
-    transform: rotateZ(-5deg);
 }
 .SensuousStarsMoodboosting {
     border: 1px solid black;
@@ -1627,7 +1730,23 @@ main .sub2Mainbanner > figure::after{
     margin-top: 27px;
     transform: translate(-30%,-12%);
     font-size: 11px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
+.SensuousStarsMoodboosting::before {
+    content: "";
+    position: absolute;
+    left: 32%;
+    width: 1px;
+    bottom: 100%;
+    height: 73px;
+    background: #000;
+    transform: rotateZ(-5deg);
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+}
+.SensuousStarsMoodboosting.show{opacity: 1;}
 .SensuousStarsMoodboosting > h4 {
     font-size: 21px;
     font-weight: 600;
@@ -1659,7 +1778,20 @@ main .sub2Mainbanner > figure::after{
     object-fit: cover;
     transition: all 0.5s ease 0s;
 }
-.otherPerfume > ul > li > ul > li img:hover{transform: scale(1.0);}
+.down{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+} 
+.down.on{
+    transform: translateY(0);
+    opacity: 1;
+}
+.otherPerfume > ul > li > ul > li:nth-of-type(1){transition: all 0.5s ease 0s;}
+.otherPerfume > ul > li > ul > li:nth-of-type(2){transition: all 0.5s ease 0.25s;}
+.otherPerfume > ul > li > ul > li:nth-of-type(3){transition: all 0.5s ease 0.45s;}
+.otherPerfume > ul > li > ul > li:nth-of-type(4){transition: all 0.5s ease 0.65s;}
+.otherPerfume > ul > li > ul > li img:hover{transform: scale(1.1);}
 .otherPerfume > ul > li > ul > li h4{
     font-size: 20px;
     font-weight: 500;
@@ -1669,6 +1801,84 @@ main .sub2Mainbanner > figure::after{
     font-size: 16px;
     margin-top: 3px;
 }
+.shadeForm{
+    display: flex;
+    justify-content: center;
+}
+.shadeForm>li{
+    width:20px;
+    height:20px;
+    font-size:0;
+    margin:0 4px;
+}
+/* 1 */
+.shadeForm>li.c1{background:#fac7a7;}
+.shadeForm>li.c2{background:#e6bb98;}
+.shadeForm>li.c3{background:#efc99a}
+.shadeForm>li.c4{background:#dfc09f}
+.shadeForm>li.c5{background:#d4b180}
+.shadeForm>li.c6{background:#d5b495;}
+.shadeForm>li.c7{background:#d4b180;}
+.shadeForm>li.c8{background:#d8a665;}
+.shadeForm>li.c9{background:#e2b06f;}
+.shadeForm>li.c10{background:#d0a26e;}
+.shadeForm>li.c11{background:#c7a265;}
+.shadeForm>li.c12{background:#d8a46d;}
+.shadeForm>li.c13{background:#d6a46b;}
+.shadeForm>li.c14{background:#dea567;}
+.shadeForm>li.c15{background:#d19872;}
+.shadeForm>li.c16{background:#c9a267;}
+.shadeForm>li.c17{background:#c59c63;}
+.shadeForm>li.c18{background:#ca9d6f;}
+.shadeForm>li.c19{background:#c88d4f;}
+.shadeForm>li.c20{background:#c9924d;}
+/* 2 */
+.shadeForm>li.c21{background:#e2c8b1;}
+.shadeForm>li.c22{background:#dfc5aa;}
+.shadeForm>li.c23{background:#dcbea2;}
+.shadeForm>li.c24{background:#e0c29e;}
+.shadeForm>li.c25{background:#e0bd9d;}
+.shadeForm>li.c26{background:#ddbea2;}
+.shadeForm>li.c27{background:#e2c09b;}
+.shadeForm>li.c28{background:#d7b18d;}
+.shadeForm>li.c29{background:#dcb999;}
+.shadeForm>li.c30{background:#d5b79d;}
+.shadeForm>li.c31{background:#d5aa80;}
+/* 3 */
+.shadeForm>li.c32{background:#d4b69c;}
+.shadeForm>li.c33{background:#d0ad8d;}
+.shadeForm>li.c34{background:#d1b08f;}
+.shadeForm>li.c35{background:#c7aa8c;}
+.shadeForm>li.c36{background:#caab8c;}
+.shadeForm>li.c37{background:#c3a487;}
+.shadeForm>li.c38{background:#c3a589;}
+.shadeForm>li.c39{background:#c5a78f;}
+/* 4 */
+.shadeForm>li.c40{background:#e0a094;}
+.shadeForm>li.c41{background:#d32642;}
+.shadeForm>li.c42{background:#e71c2f;}
+.shadeForm>li.c43{background:#af0146;}
+.shadeForm>li.c44{background:#5c1c2c;}
+.shadeForm>li.c45{background:#633734;}
+/* 5 */
+.shadeForm>li.c46{background:#ffe7d3;}
+.shadeForm>li.c47{background:#ffe3c1;}
+.shadeForm>li.c48{background:#ffe3bd;}
+.shadeForm>li.c49{background:#ffdcb6;}
+.shadeForm>li.c50{background:#f4d8bc;}
+.shadeForm>li.c51{background:#ffcea1;}
+.shadeForm>li.c52{background:#edc0a5;}
+/* 6 */
+.shadeForm>li.c53{background:#d7b89c;}
+.shadeForm>li.c54{background:#dabb9c;}
+.shadeForm>li.c55{background:#dec19f;}
+.shadeForm>li.c56{background:#d6baa4;}
+
+
+
+
+
+
 
 
 
