@@ -52,8 +52,7 @@ let bestProduct = [
         imgFileName:"어드밴스드 나이트 리페어 아이 수퍼차지드 젤-크림.png",
         subTitle:"Advanced Night Repair",
         proTxt:"2주 만에 다크서클 개선으로 더욱 환해지는 눈가피부를 충전시킬<br>에스티 로더의 단 하나의 슈퍼히어로",
-        price:"₩112,000",
-        shade:"c1,c6"
+        price:"₩112,000"
     },
     {
         type:0,

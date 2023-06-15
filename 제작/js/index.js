@@ -57,7 +57,7 @@ $(document).ready(function(){
     })
 
     let slider3promote = new Swiper(".sliderPromote",{
-        slidesPerView : 2,
+        slidesPerView : "auto",
         spaceBetween: 30,
         navigation: {
             nextEl: ".btnnext3",
