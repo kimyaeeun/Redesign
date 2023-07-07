@@ -36,36 +36,51 @@ $(document).ready(function(){
         e.preventDefault()
     })
 
+
     let slider1best = new Swiper(".best",{
-        slidesPerView : 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: ".btnnext1",
-            prevEl: ".btnprev1",
-        },
-        loop:true
+          breakpoints:{
+            280:{
+                slidesPerView:2,
+                spaceBetween:30,
+                loop:true
+            },
+            768:{
+                slidesPerView:3,
+                spaceBetween:30,
+                loop:true
+            },
+        }
     })
 
     let slider2new = new Swiper(".sliderNew",{
-        slidesPerView : 2.5,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: ".btnnext2",
-            prevEl: ".btnprev2",
-        },
-        loop:true
+          breakpoints:{
+            280:{
+                slidesPerView:2,
+                spaceBetween:30,
+                loop:true
+            },
+            768:{
+                slidesPerView:3,
+                spaceBetween:30,
+                loop:true
+            },
+        }
     })
 
     let slider3promote = new Swiper(".sliderPromote",{
-        slidesPerView : "auto",
-        spaceBetween: 30,
-        navigation: {
-            nextEl: ".btnnext3",
-            prevEl: ".btnprev3",
-        },
-        loop:true
+          breakpoints:{
+            280:{
+                slidesPerView:2,
+                spaceBetween:30,
+                loop:true
+            },
+            768:{
+                slidesPerView:3,
+                spaceBetween:30,
+                loop:true
+            },
+        }
     })
-
 
     //notice    
     $(".scTop>li").each(function(){
@@ -102,6 +117,21 @@ $(document).ready(function(){
                 $(this).removeClass("on")
             }
         })
+    })
+
+    let sliderpresent = new Swiper(".present",{
+          breakpoints:{
+            280:{
+                slidesPerView:2,
+                spaceBetween:30,
+                loop:true
+            },
+            768:{
+                slidesPerView:5,
+                spaceBetween:30,
+                loop:true
+            },
+        }
     })
 })
 
