@@ -871,6 +871,11 @@ main .sub2Mainbanner > figure::after{
     width: 90%;
     margin: 0 auto;
 }
+.innerFooter>.bottomTop>p{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
 .topfleft{
     color: #fff;
     width: 100%;
